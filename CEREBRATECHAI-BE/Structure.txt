@@ -1,0 +1,49 @@
+/backend
+├── /auth-service
+│   ├── /src
+│   │   ├── /controllers
+│   │   ├── /middlewares
+│   │   ├── /models
+│   │   ├── /routes
+│   │   ├── /services
+│   │   └── app.js
+│   ├── /config
+│   │   └── db.config.js
+│   ├── /migrations
+│   ├── package.json
+│   └── Dockerfile
+├── /chatbot-service
+│   ├── /src
+│   │   ├── /controllers
+│   │   ├── /middlewares
+│   │   ├── /routes
+│   │   ├── /services
+│   │   └── app.js
+│   ├── /config
+│   │   └── api.config.js
+│   ├── package.json
+│   └── Dockerfile
+├── /project-service
+│   ├── /src
+│   │   ├── /controllers
+│   │   ├── /models
+│   │   ├── /routes
+│   │   ├── /services
+│   │   └── app.js
+│   ├── /config
+│   │   └── db.config.js
+│   ├── /migrations
+│   ├── package.json
+│   └── Dockerfile
+├── /solution-service
+│   ├── /src
+│   │   ├── /controllers
+│   │   ├── /models
+│   │   ├── /routes
+│   │   ├── /services
+│   │   └── app.js
+│   ├── /config
+│   │   └── api.config.js
+│   ├── package.json
+│   └── Dockerfile
+└── docker-compose.yml

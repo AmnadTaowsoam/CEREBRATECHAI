@@ -1,0 +1,48 @@
+version: '3'
+services:
+  auth-service:
+    build: ./auth-service
+    ports:
+      - '4001:4000'
+    environment:
+      - DATABASE_URL=postgres://user:password@postgres:5432/auth_db
+    depends_on:
+      - postgres
+  
+  chatbot-service:
+    build: ./chatbot-service
+    ports:
+      - '4002:4000'
+    environment:
+      - OPENAI_API_KEY=your_openai_api_key
+  
+  project-service:
+    build: ./project-service
+    ports:
+      - '4003:4000'
+    environment:
+      - DATABASE_URL=postgres://user:password@postgres:5432/project_db
+    depends_on:
+      - postgres
+  
+  solution-service:
+    build: ./solution-service
+    ports:
+      - '4004:4000'
+    environment:
+      - DATABASE_URL=postgres://user:password@postgres:5432/solution_db
+    depends_on:
+      - postgres
+  
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+  
+volumes:
+  postgres_data:

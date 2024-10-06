@@ -1,0 +1,4 @@
+##auth-service
+/CEREBRATECHAI-BE/CEREBRATECHAI-AUTH-SERVICE/node_modules
+*.code-workspace
+yarn.lock
